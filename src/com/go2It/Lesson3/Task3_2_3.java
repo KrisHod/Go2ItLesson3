@@ -1,32 +1,40 @@
 package com.go2It.Lesson3;
 
 enum OPERATIONS {
-    ADD("additon", '+'),
-    SUBTRACT("substraction", '-'),
-    MULTIPLY("multiplication", '*'),
-    DIVIDE("division", '/');
+    ADD("additon"),
+    SUBTRACT("substraction"),
+    MULTIPLY("multiplication"),
+    DIVIDE("division");
 
     private String operation;
     private char operator;
 
-    OPERATIONS(String operation, char operator) {
+    OPERATIONS(String operation) {
         this.operation = operation;
-        this.operator = operator;
     }
-        public String getOperation(){
-            return operation;
-        }
-        public char getOperator () {
-            return operator;
-        }
 
+    public String getOperation() {
+        return operation;
+    }
 }
 
 public class Task3_2_3 {
 
-
     public static void calculate(int a, int b, OPERATIONS op) {
-        System.out.println("The result of " + op.getOperation() + " is " + a + op.getOperator() + b);
+        switch (op) {
+            case ADD:
+                System.out.println("The result of " + op.getOperation() + " is " + a + b);
+                break;
+            case DIVIDE:
+                System.out.println("The result of " + op.getOperation() + " is " + a / b);
+                break;
+            case MULTIPLY:
+                System.out.println("The result of " + op.getOperation() + " is " + a * b);
+                break;
+            case SUBTRACT:
+                System.out.println("The result of " + op.getOperation() + " is " + (a - b));
+                break;
+        }
     }
 
     public static void main(String[] args) {
