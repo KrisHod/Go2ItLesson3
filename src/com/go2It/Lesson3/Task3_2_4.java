@@ -20,9 +20,21 @@ public class Task3_2_4 {
         return daysLeftList;
     }
 
+    // overloaded method showLeftDays
+    public static void showLeftDays(DAYS_OF_WEEK currentDay, int additionalDaysOf){
+        if (currentDay.ordinal()==5 || currentDay.ordinal()==6) {
+            System.out.println("Horray! It's weekend!");
+        } else {
+            System.out.println("There are " + (4 - additionalDaysOf - currentDay.ordinal()) + " days till the weekend");
+        }
+    }
+
+
+
     public static void main(String[] args) {
         showLeftDays(DAYS_OF_WEEK.MONDAY);
         System.out.println(returnArray(DAYS_OF_WEEK.MONDAY));
+        showLeftDays(DAYS_OF_WEEK.MONDAY, 3);
     }
 
 }

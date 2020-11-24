@@ -1,6 +1,7 @@
 package com.go2It.Lesson3;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Task3_1_2 {
     public static void main(String[] args) {
@@ -27,8 +28,8 @@ public class Task3_1_2 {
 //        System.out.println(divisibleBy6.length);
 
         // version with ArrayList
-        ArrayList<Integer> num = new ArrayList<>();
-        ArrayList<Integer> divisibleBy6 = new ArrayList<>();
+        List<Integer> num = new ArrayList<>();
+        List<Integer> divisibleBy6 = new ArrayList<>();
         for (int i = 0, j = 0; i < 100 && j < 100; i++, j += 3) {
             if (j % 6 != 0) {                                 // without digitals divided by 6
                 num.add(j);
