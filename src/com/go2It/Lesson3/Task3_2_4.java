@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Task3_2_4 {
 
-    public static void showLeftDays(DAYS_OF_WEEK currentDay) {
+    public static void showLeftDays(DAY_OF_WEEK currentDay) {
         if (currentDay.ordinal()==5 || currentDay.ordinal()==6) {
             System.out.println("Horray! It's weekend!");
         } else {
@@ -13,15 +13,15 @@ public class Task3_2_4 {
         }
     }
 
-    public static List<DAYS_OF_WEEK> returnArray (DAYS_OF_WEEK currentDay){
-        DAYS_OF_WEEK [] arrOfAllDays = DAYS_OF_WEEK.values();
-        List<DAYS_OF_WEEK> daysOfWeekList = Arrays.asList(arrOfAllDays);
-        List<DAYS_OF_WEEK> daysLeftList = daysOfWeekList.subList(currentDay.ordinal()+1,DAYS_OF_WEEK.SATURDAY.ordinal());
+    public static List<DAY_OF_WEEK> returnArray (DAY_OF_WEEK currentDay){
+        DAY_OF_WEEK[] arrOfAllDays = DAY_OF_WEEK.values();
+        List<DAY_OF_WEEK> daysOfWeekList = Arrays.asList(arrOfAllDays);
+        List<DAY_OF_WEEK> daysLeftList = daysOfWeekList.subList(currentDay.ordinal()+1, DAY_OF_WEEK.SATURDAY.ordinal());
         return daysLeftList;
     }
 
     // overloaded method showLeftDays
-    public static void showLeftDays(DAYS_OF_WEEK currentDay, int additionalDaysOf){
+    public static void showLeftDays(DAY_OF_WEEK currentDay, int additionalDaysOf){
         if (currentDay.ordinal()==5 || currentDay.ordinal()==6) {
             System.out.println("Horray! It's weekend!");
         } else {
@@ -32,9 +32,9 @@ public class Task3_2_4 {
 
 
     public static void main(String[] args) {
-        showLeftDays(DAYS_OF_WEEK.MONDAY);
-        System.out.println(returnArray(DAYS_OF_WEEK.MONDAY));
-        showLeftDays(DAYS_OF_WEEK.MONDAY, 3);
+        showLeftDays(DAY_OF_WEEK.MONDAY);
+        System.out.println(returnArray(DAY_OF_WEEK.MONDAY));
+        showLeftDays(DAY_OF_WEEK.MONDAY, 3);
     }
 
 }
